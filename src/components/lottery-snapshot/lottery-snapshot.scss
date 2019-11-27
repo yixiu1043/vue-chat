@@ -1,0 +1,82 @@
+.lottery-snapshot {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  font-size: px2rem(9px);
+  color: $black;
+  background-color: $white;
+  justify-content: space-around;
+  align-items: center;
+
+  .lottery-icon {
+    width: px2rem(40px);
+    text-align: center;
+
+    img {
+      width: px2rem(30px);
+      height: auto;
+      background: url(../../assets/hall/icon_bg.png) no-repeat center / cover;
+      border-radius: px2rem(5px);
+    }
+  }
+
+  .open-counter,
+  .lock-counter {
+    margin-right: px2rem(2px);
+    width: px2rem(60px);
+    text-align: center;
+
+    .title {
+      margin-bottom: px2rem(4px);
+    }
+
+    .title::before {
+      color: $green;
+      margin-right: px2rem(2px);
+      content: "⬤";
+    }
+  }
+
+  .lock-counter {
+    .title::before {
+      color: $red;
+    }
+  }
+
+  .crrent-last-con {
+    flex: 1;
+
+    .crrent-info {
+      display: flex;
+      padding-bottom: px2rem(2px);
+      justify-content: flex-start;
+      align-items: center;
+
+      .issue {
+        padding-right: px2rem(5px);
+      }
+    }
+
+    .last-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: px2rem(2px);
+
+      .ball-wrapper {
+        .ball {
+          display: inline-block;
+          width: px2rem(14px);
+          height: px2rem(14px);
+          margin: 0 px2rem(1px);
+          line-height: px2rem(14px);
+          color: $white;
+          text-align: center;
+          background-color: $red;
+          border-radius: px2rem(2px);
+          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+      }
+    }
+  }
+}

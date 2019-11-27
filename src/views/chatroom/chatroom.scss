@@ -1,0 +1,108 @@
+@import "../../styles/compass.scss";
+@import "../../styles/color.scss";
+
+
+.scroll {
+  overflow: auto;
+}
+
+.chatroom {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  &.chatroom.light {
+    background-color: $light_white;
+  }
+
+  &.chatroom.dark {
+    background-color: $light_black;
+  }
+
+  section.content {
+    width: 100%;
+
+    .screen {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+
+      &.is-snapshot {
+        // height: 2.5rem;
+      }
+
+      &.is-ios {
+        height: 15.3125rem;
+      }
+
+      &.is-android {
+        height: 13.96875rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .container {
+      .top-slide{
+        width: 100%;
+        height: px2rem(1px);
+        position: relative;
+
+        .top-show{
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 9;
+        }
+      }
+      .scroll-container {
+        display: flex;
+        padding-right: px2rem(15px);
+        padding-left: px2rem(15px);
+
+        .scroll {
+          width: 100%;
+
+          .message {
+            padding-bottom: px2rem(20px);
+          }
+        }
+      }
+    }
+  }
+  .select-lottery{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 210;
+  }
+
+
+
+  .back-bottom {
+    position: absolute;
+    right: px2rem(10px);
+    bottom: px2rem(70px);
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(243, 112, 75);
+  }
+}
+
+/deep/ .mint-popup {
+  .head {
+    color: $primary_white;
+  }
+}

@@ -1,0 +1,142 @@
+@import './color.scss';
+@import "./compass.scss";
+
+// 字体颜色
+.yellow-font {
+  color: $yellow;
+}
+
+.black-font {
+  color: $black;
+}
+
+.white-font {
+  color: $white;
+}
+
+.red-font {
+  color: $red;
+}
+
+.green-font {
+  color: $green;
+}
+
+.gray-font {
+  color: $gray;
+}
+
+.blue-font {
+  color: $blue;
+}
+
+.mint-toast {
+  z-index: 3000;
+}
+
+// toast标准尺寸
+.toast-primary {
+  width: 120px;
+  padding: 30px;
+  line-height: 1.5;
+}
+
+// toast标准尺寸
+.toast-middle {
+  width: 200px;
+  padding: 30px;
+  line-height: 1.5;
+}
+
+// 超出省略号
+.text-ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; //要显示几行,需要高度和宽度。
+}
+
+// 字体大小
+.font-10px {
+  font-size: px2rem(10px);
+}
+
+.font-12px {
+  font-size: px2rem(12px);
+}
+
+.font-14px {
+  font-size: px2rem(14px);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.br {
+  border-right: 1px solid $border_color;
+}
+
+.bt {
+  border-top: 1px solid $border_color;
+}
+
+.bl {
+  border-left: 1px solid $border_color;
+}
+
+.bb {
+  border-bottom: 1px solid $border_color;
+}
+
+.mt-5px {
+  margin-top: px2rem(5px);
+}
+
+.mr-5px {
+  margin-right: px2rem(5px);
+}
+
+.mb-5px {
+  margin-bottom: px2rem(5px);
+}
+
+.ml-5px {
+  margin-left: px2rem(5px);
+}
+
+.clear {
+  zoom: 1;
+
+  &::after {
+    display: block;
+    height: 0;
+    clear: both;
+    content: "";
+    visibility: hidden;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// 禁止文字被鼠标选中
+.user-select-one {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

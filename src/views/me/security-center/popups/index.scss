@@ -1,0 +1,70 @@
+$w: 100%;
+
+.popup-box {
+  width: 100%;
+  margin-top: px2rem(2px);
+
+  .detail {
+    width: 0.94 * $w;
+    padding: 0 0.03 * $w;
+    height: px2rem(60px);
+    line-height: px2rem(60px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border_color;
+    font-size: px2rem(16px);
+  }
+
+  .content {
+    color: $red;
+
+    .input-box {
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: px2rem(13px);
+      border-top: px2rem(1px) solid $border_color;
+
+      span {
+        text-align: center;
+        width: 20%;
+      }
+
+      /deep/.mint-cell-wrapper {
+        flex: 1;
+        background: none;
+        background-position: none;
+        background-repeat: none;
+        background-size: 0;
+      }
+
+      /deep/.mint-field {
+        background: none;
+        background-position: none;
+        background-repeat: none;
+        background-size: 0;
+      }
+    }
+
+    .input-box:first-child {
+      border-top-left-radius: px2rem(3px);
+      border-top-right-radius: px2rem(3px);
+      overflow: hidden;
+    }
+
+    .input-box:nth-child(3) {
+      border-bottom-left-radius: px2rem(3px);
+      border-bottom-right-radius: px2rem(3px);
+      overflow: hidden;
+    }
+
+    .input-box:nth-child(4) {
+      border-top: none;
+      background: none;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+section.money-record {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  &.nodata {
+    background-image: url("../../../assets/me/nodata.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .scroll {
+    @include prefixer-value(height, calc(100% - 2.5rem), webkit moz o ms);
+    overflow: auto;
+  }
+
+  .flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .content {
+    padding: px2rem(10px);
+
+    .card {
+      margin-bottom: px2rem(15px);
+      line-height: px2rem(25px);
+      border: 1px solid $border_color;
+      box-shadow: 0 1px 3px 0 $border_color;
+
+      .card-header {
+        font-size: px2rem(14px);
+        color: $white;
+        text-indent: px2rem(15px);
+        background-color: $theme;
+      }
+
+      .card-content {
+        padding: px2rem(5px);
+
+        table {
+          width: 100%;
+          font-size: px2rem(12px);
+          border: 1px solid $border_color;
+
+          caption,
+          tfoot {
+            text-align: left;
+            text-indent: px2rem(10px);
+          }
+
+          tbody {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .loading-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: px2rem(50px);
+
+    .loading {
+      height: inherit;
+    }
+  }
+}

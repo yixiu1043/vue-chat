@@ -1,0 +1,125 @@
+$w: 100%;
+
+/deep/.mint-cell {
+  .mint-cell-wrapper {
+    background-image: none;
+  }
+}
+
+.bank-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: $w;
+  height: 100%;
+  
+  header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    margin-top: 2.5rem;
+    @include prefixer-value(height, calc(100% - 2.5rem), webkit moz o ms);
+
+    .content {
+      display: flex;
+      width: 0.94 * $w;
+      padding: 0 0.03 * $w;
+      margin-top: px2rem(10px);
+      font-size: px2rem(13px);
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .input-box {
+        display: flex;
+        // border-bottom: 1px solid $border_color;
+        width: 0.94 * $w;
+        height: px2rem(50px);
+        margin: 0 0.03 * $w;
+        margin-top: px2rem(2px);
+        text-align: center;
+        background-color: white;
+        border: px2rem(1px) solid $border_color;
+        border-radius: px2rem(5px);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          width: 24%;
+          text-align: center;
+        }
+
+        /deep/.mint-cell {
+          background: none;
+          border: none;
+          flex: 1;
+
+          /deep/.mint-cell-wrapper {
+            display: flex;
+            background: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            /deep/.mint-cell-value {
+              width: 90% !important;
+              flex: none;
+
+              .mint-field-core {
+                width: 100%;
+                flex: none;
+              }
+
+              /deep/input:disabled {
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .input-btn {
+        width: 94%;
+        margin: px2rem(10px) 3%;
+
+        /deep/.mint-button--default {
+          border: px2rem(1px) solid $border_color;
+          box-shadow: none;
+        }
+      }
+    }
+
+    footer {
+      width: 0.94 * $w;
+      padding: 0.03 * $w 0;
+      margin-top: px2rem(50px);
+      border-left: 4px solid $red;
+      border-radius: 3px;
+      box-shadow: -3px 1px 3px -2px $red;
+
+      p {
+        width: 0.98 * $w;
+        margin: 0 0.01 * $w;
+        font-size: px2rem(15px);
+        line-height: px2rem(20px);
+        word-wrap: break-word;
+      }
+
+      p:nth-child(1) {
+        margin-bottom: px2rem(5px);
+      }
+    }
+  }
+
+  .picker {
+    width: 100%;
+  }
+}

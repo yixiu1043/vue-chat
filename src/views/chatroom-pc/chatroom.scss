@@ -1,0 +1,144 @@
+.chatroom-pc {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 699px;
+  flex-direction: column;
+
+  header {
+    width: 100%;
+    height: 60px;
+  }
+
+  section.main {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    .left-con {
+      width: 260px;
+      min-width: 226px;
+      background-color: $white;
+      border-top: 1px solid $primary_white;
+      border-right: 1px solid $border_color;
+      @include prefixer-value(height, calc(100vh - 60px), webkit moz o ms);
+    }
+
+    .right-con {
+      position: relative;
+      overflow: hidden;
+      width: 450px;
+      min-width: 450px;
+      background-color: $white;
+      border-top: 1px solid $primary_white;
+      border-left: 1px solid $border_color;
+      @include prefixer-value(height, calc(100vh - 60px), webkit moz o ms);
+
+      .iframe-con {
+        position: absolute;
+        top: 46px;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .trend-con,
+      .history-con,
+      .live-con {
+        overflow: hidden;
+        position: absolute;
+        top: 46px;
+        left: 0;
+        width: 100%;
+        @include prefixer-value(height, calc(100vh - 107px), webkit moz o ms);
+      }
+    }
+
+    .middle-con {
+      position: relative;
+      min-width: 515px;
+      overflow: hidden;
+      flex: 1;
+
+      .message-view{
+        @include prefixer-value(height, calc(100vh - 60px), webkit moz o ms);
+        
+        .head {
+          display: flex;
+          width: 100%;
+          height: 46px;
+          background-color: $light_white;
+          border-bottom: 1px solid $border_color;
+          justify-content: space-between;
+          position: relative;
+  
+          .head-lottery {
+            width: 100%;
+          }
+        }
+  
+        .message {
+          padding: 0 30px;
+          overflow-y: scroll;
+          background-color: white;
+          @include prefixer-value(height, calc(100vh - (61px + 46px + 68px)), webkit moz o ms);
+        }
+  
+        .select-lottery {
+          width: 100%;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 200;
+        }
+
+        .back-bottom {
+          position: absolute;
+          bottom: 75px;
+          right: 15px;
+          z-index: 15;
+          display: flex;
+          font-size: 18px;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      .other-view {
+        @include prefixer-value(height, calc(100vh - 60px), webkit moz o ms);
+      }
+
+    }
+  }
+
+
+  /deep/.mint-header {
+    height: 46px;
+    color: $black;
+    background-color: $primary_white !important;
+    border-bottom: 1px solid $border_color;
+
+    .mint-button-icon {
+      display: none;
+    }
+
+    .mint-header-title {
+      font-size: 16px;
+    }
+  }
+
+  /deep/.guide-modal {
+
+    width: 350px;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+
+    .icon {
+      font-size: 25px;
+      color: $yellow;
+      vertical-align: middle;
+    }
+  }
+}

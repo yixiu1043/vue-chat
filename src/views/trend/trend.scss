@@ -1,0 +1,108 @@
+.trend-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  header {
+    height: px2rem(40px);
+    background-color: $theme;
+    display: flex;
+    flex-direction: row;
+    color: $white;
+    text-align: center;
+    line-height: px2rem(40px);
+    font-size: 18px;
+    position: relative;
+
+    .icon-back {
+      position: absolute;
+      width: px2rem(50px);
+      font-size: px2rem(16px);
+    }
+
+    .icon-menu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: px2rem(50px);
+    }
+
+    .select {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding-right: px2rem(10px);
+        font-size: 16px;
+      }
+    }
+  }
+
+  main {
+    position: relative;
+    background: $primary_white;
+    height: 100%;
+
+    .select-lottery {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 200;
+      overflow: hidden;
+    }
+
+    .b-scroll {
+      overflow: auto;
+      @include prefixer-value(height, calc(100% - 2.5rem), webkit moz o ms);
+      @include prefixer(overflow-scrolling, touch, webkit moz o ms);
+      @include prefixer(scroll-behavior, smooth, webkit moz o ms);
+
+      .trend {
+        background: $primary_white;
+
+        table {
+          display: flex;
+          flex-direction: column;
+
+          thead tr {
+            display: flex;
+
+            @extend .center;
+
+            th:first-child {
+              width: px2rem(100px);
+            }
+
+            th:last-child {
+              flex: auto;
+            }
+          }
+
+          tbody tr {
+            display: flex;
+
+            @extend .center;
+
+            td:first-child {
+              width: px2rem(100px);
+
+              span.ball {
+                @extend .ball;
+              }
+            }
+
+            td:last-child {
+              flex: auto;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

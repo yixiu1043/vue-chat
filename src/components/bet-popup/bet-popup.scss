@@ -1,0 +1,93 @@
+.collection-modal {
+  background-color: $primary_white;
+
+  .modal-content {
+
+    .info {
+      &:first-child {
+        border-top: unset;
+      }
+
+      height: px2rem(42px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $border_color;
+      font-size: px2rem(12px);
+      padding: 0 5%;
+    }
+
+    .code {
+      max-width: 80%;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+
+      .text-ellipsis {
+        max-width: px2rem(205px);
+        white-space: unset;
+        color: $blue;
+      }
+    }
+
+    .money-input {
+      width: px2rem(120px);
+      height: px2rem(30px);
+      outline: unset;
+      border: unset;
+    }
+
+    .bet-button {
+      background-color: $red;
+      width: px2rem(60px);
+      height: px2rem(32px);
+      font-size: px2rem(14px);
+      color: $white;
+    }
+  }
+
+  .modal-content.pc {
+    .info {
+      &:first-child {
+        border-top: unset;
+      }
+
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid $border_color;
+      font-size: 13px;
+      padding: 0 5%;
+
+    }
+
+    .code {
+      max-width: 80%;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+
+      .text-ellipsis {
+        max-width: auto;
+        cursor: pointer;
+      }
+    }
+
+    .money-input {
+      width: 220px;
+      height: 40px;
+      outline: unset;
+      border: unset;
+    }
+
+    .bet-button {
+      background-color: $red;
+      width: 60px;
+      height: 32px;
+      font-size: 14px;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}

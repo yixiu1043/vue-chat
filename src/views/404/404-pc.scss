@@ -1,0 +1,41 @@
+.page404.pc {
+  .content404 {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $black;
+    text-align: center;
+    margin: 0 auto;
+
+    .img-404 {
+      width: 560px;
+      margin-bottom: 10px;
+    }
+
+    .tip-title {
+      font-size: 30px;
+    }
+
+    .tip-subtitle {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .back-home {
+      .button {
+        display: inline-block;
+        width: 130px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #ff7614;
+        border-color: #ff7614;
+        font-size: 16px;
+        color: $white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

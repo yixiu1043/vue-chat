@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    image: node:10.15.0
+    working_dir: /usr/src/app
+    container_name: web-${DOCKER_ENV}
+    volumes:
+      - .:/usr/src/app
+    command: ${WEB_START_COMMAND}
+
+  nginx:
+    image: nginx:1.14.2
+    container_name: nginx-${DOCKER_ENV}
+    volumes:
+      - ./vw.conf:/etc/nginx/conf.d/vw.conf
+      - ./api-vw.conf:/etc/nginx/conf.d/api-vw.conf
+    ports:
+      - ${DOCKER_PORT}:6868
+      - ${DOCKER_API_PORT}:6869
+    links:
+      - web

@@ -1,0 +1,151 @@
+@import "@/styles/color.scss";
+@import "@/styles/compass.scss";
+
+.pc-head {
+  float: left;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: $white;
+  background: url("../../../../assets/me//header_bg.png") no-repeat center / cover;
+  background-color: $pc_theme;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+  .logo {
+    float: left;
+    width: 260px;
+    height: 100%;
+    text-align: center;
+
+    img {
+      width: auto;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  nav {
+    display: flex;
+    float: left;
+    flex-direction: row;
+    justify-content: center;
+
+    .collection {
+      height: 60px;
+      margin-right: 30px;
+      line-height: 60px;
+      cursor: pointer;
+    }
+
+    .do-chatroom {
+      position: relative;
+      height: 60px;
+      margin-right: 30px;
+      line-height: 60px;
+      cursor: pointer;
+      padding: 0 10px;
+
+      canvas.code {
+        position: absolute;
+        bottom: -121px;
+        left: -18.5px;
+        z-index: 5;
+        display: none;
+        box-shadow: 0px 0px 3px 0px $black;
+        border-radius: 5px;
+        width: 120px !important;
+        height: 120px !important;
+      }
+    }
+
+    .collection:hover {
+      color: $yellow;
+    }
+
+    .do-chatroom:hover {
+      canvas.code {
+        display: block;
+      }
+    }
+
+    .chatroom{
+      padding: 0 20px;
+      font-size: 16px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+      text-align: center;
+      position: relative;
+
+      .init{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .icon{
+          margin-left: 10px;
+        }
+        .text{
+          letter-spacing: 2px;
+          transform: perspective(500px);
+          transition: 0.5s;
+          overflow: hidden;
+          color: white;
+        }
+        .text:hover {
+          transform: perspective(500px);
+        }
+        .text::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to right, transparent, white, transparent);
+          left: -100%;
+          transition: 0.5s;
+        }
+        .text:hover::before {
+          left: 100%;
+        }
+      }
+
+      .menu{
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        z-index: 22;
+        overflow: hidden;
+        
+        .game-dropdown-list{
+          box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          background-color: rgba($color: $light_black, $alpha: 0.3);
+          border-radius: 5px;
+          z-index: 1;
+          overflow: hidden;
+        }
+      }
+
+    }
+    
+  }
+
+  /deep/.collection-modal {
+
+    line-height: 50px;
+    text-align: center;
+
+    .icon {
+      font-size: 25px;
+      color: $yellow;
+      vertical-align: middle;
+    }
+  }
+
+  .userinfo-modal {
+    /deep/.mint-header {
+      display: none;
+    }
+  }
+}

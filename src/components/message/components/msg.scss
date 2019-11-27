@@ -1,0 +1,59 @@
+@import "@/styles/compass.scss";
+@import "@/styles/color.scss";
+
+
+.msg-wrapper {
+  display: flex;
+  margin-top: px2rem(8px);
+  margin-bottom: px2rem(2px);
+
+  .user-avatar {
+    min-width: px2rem(32px);
+    display: flex;
+    background: url(../../../assets/avatar/default.png) no-repeat;
+    background-size: px2rem(32px) auto;
+
+    img {
+      width: px2rem(32px);
+      height: px2rem(32px);
+      border-radius: px2rem(3px);
+    }
+  }
+
+  .msg-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .time {
+      margin-bottom: px2rem(6px);
+      font-size: px2rem(10px);
+      color: $chatroom_msg_time;
+    }
+
+    .text {
+      display: flex;
+      font-size: px2rem(12px);
+      position: relative;
+      align-items: center;
+      border-radius: px2rem(4px);
+      padding: px2rem(2px) px2rem(10px);
+      max-width: px2rem(250px);
+      min-width: px2rem(30px);
+      min-height: px2rem(25px);
+      line-height: 1.5;
+      word-break: break-word;
+      text-align: left;
+
+      .triangle {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: px2rem(6px);
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        top: px2rem(4px);
+      }
+    }
+  }
+}

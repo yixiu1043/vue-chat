@@ -1,0 +1,111 @@
+.trend-box.pc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 14px;
+
+  header {
+    height: 39px;
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    color: $black;
+    border-top: 1px solid $border_color;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    position: relative;
+
+    .icon-back {
+      position: absolute;
+      width: 50px;
+    }
+
+    .select {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding-right: px2rem(10px);
+        font-size: 14px;
+      }
+    }
+  }
+  main{
+    position: relative;
+    background: $primary_white;
+    height: 100%;
+    @include prefixer(overflow-scrolling, touch, webkit moz o ms);
+    @include prefixer(scroll-behavior, smooth, webkit moz o ms);
+    .select-lottery{
+      width: 33%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      overflow: hidden;
+     }
+     .b-scroll{
+      overflow: auto;
+      height: 100%;
+
+      .trend {
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: auto;
+        background: $primary_white;
+        height:calc(100% - 40px);
+    
+        table {
+          display: flex;
+          flex-direction: column;
+    
+          thead tr {
+            display: flex;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+    
+            th:first-child {
+              width: 120px;
+            }
+    
+            th:last-child {
+              flex: auto;
+            }
+          }
+    
+          tbody tr {
+            display: flex;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+    
+            td:first-child {
+              width: 120px;
+    
+              span.ball {
+                @extend .ball.pc;
+              }
+            }
+    
+            td:last-child {
+              flex: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

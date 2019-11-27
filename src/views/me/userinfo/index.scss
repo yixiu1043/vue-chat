@@ -1,0 +1,138 @@
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+
+.userinfo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  background-color: $white;
+
+  .detail {
+    padding-top: px2rem(10px);
+
+    li {
+      display: flex;
+      height: px2rem(60px);
+      padding: 0 px2rem(10px);
+      font-size: px2rem(14px);
+      background-color: $primary_white;
+      border-bottom: 1px solid $border_color;
+      justify-content: space-around;
+      align-items: center;
+
+      .left-con {
+        flex: 3;
+      }
+
+      .middle-con {
+        flex: 8;
+        text-align: right;
+
+        .img-box {
+          display: inline-block;
+          width: px2rem(56px);
+          height: px2rem(56px);
+          border-radius: 50%;
+          overflow: hidden;
+          background: url('../../../assets/avatar/default.png') no-repeat;
+          background-size: 100%;
+        }
+      }
+
+      .right-con {
+        flex: 1;
+      }
+    }
+
+    li:nth-child(1) {
+      .img-box {
+        width: px2rem(56px);
+        height: px2rem(56px);
+        border-radius: 50%;
+        display: inline-block;
+        background: url(../../../assets/avatar/default.png) no-repeat;
+        background-size: px2rem(56px) auto;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    li:nth-child(3) {
+      margin-top: px2rem(20px);
+    }
+  }
+
+  .name-popup {
+    /deep/.mint-field {
+      .mint-cell-wrapper {
+        background-image: unset;
+
+        .mint-cell-value {
+          input:disabled {
+            background-color: white;
+          }
+        }
+      }
+
+      .mint-cell-title {
+        width: px2rem(55px);
+      }
+
+      .mint-field-core {
+        text-indent: px2rem(5px);
+      }
+    }
+  }
+
+  .avatar-popup {
+    .mint-navbar {
+      background-color: unset;
+
+      .tab-item {
+        width: 33%;
+        color: $gray;
+      }
+
+      .tab-item.is-selected {
+        border-bottom: px2rem(2px) solid $red;
+      }
+    }
+
+    .white-blank {
+      height: px2rem(15px);
+    }
+
+    .mint-tab-container {
+      .mint-tab-container-item {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .avatar-icon {
+          margin: px2rem(1px);
+
+          img {
+            width: px2rem(45px);
+            height: px2rem(45px);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+}

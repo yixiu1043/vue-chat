@@ -1,0 +1,99 @@
+$w: 100%;
+$h: 100%;
+
+.detail.pc {
+  width: $w;
+  height: 100%;
+  background-color: #fff;
+
+  header {
+    display: none;
+  }
+
+  .main {
+    display: flex;
+    width: 0.941 * $w;
+    padding: 0 0.03 * $w;
+    background-color: $white;
+    flex-direction: column;
+
+    .top {
+      width: $w;
+      min-height: 60px;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: $betdetails_p_color;
+
+        span:nth-child(2) {
+          font-size: 18px;
+          font-weight: 700;
+          color: $theme;
+        }
+      }
+    }
+
+    .title {
+     width: 1 * $w;
+      height: 30px;
+      padding: 0 0.03 * $w;
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 30px;
+      color: $betdetails_li_color;
+      background-color: #fff;
+    }
+
+    li {
+      display: flex;
+      min-height: 30px;
+      font-size: 16px;
+      line-height: 30px;
+      color: $betdetails_p_color;
+      flex-direction: row;
+
+      span:nth-child(1) {
+        width: 25%;
+      }
+
+      span:nth-child(2) {
+        width: 75%;
+        margin-left: 6px;
+        font-weight: 900;
+        color: $theme;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+    }
+
+    .mid {
+      width: $w;
+
+      li:nth-child(1) {
+        span:nth-child(2) {
+          font-weight: 900;
+          color: $betdetails_li_color;
+        }
+
+        span:nth-child(3) {
+          font-weight: 900;
+          color: $black;
+        }
+      }
+    }
+
+    .footer {
+      li:nth-child(5) {
+        span:nth-child(2) {
+          font-weight: 900;
+          color: $black;
+        }
+      }
+    }
+  }
+}

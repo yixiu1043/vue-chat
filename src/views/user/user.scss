@@ -1,0 +1,160 @@
+@import "@/styles/color.scss";
+@import "@/styles/compass.scss";
+
+.login,
+.register {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  padding: 0 px2rem(32px);
+  overflow: hidden;
+  background: $login_bg;
+
+  .scroll {
+    @include prefixer-value(height, calc(100% - 0.1rem), webkit moz o ms);
+    overflow: auto;
+  }
+
+  .info-box {
+    position: absolute;
+    right: px2rem(32px);
+    left: px2rem(32px);
+    z-index: 2;
+  }
+
+  header {
+    display: flex;
+    height: px2rem(120px);
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      margin-left: px2rem(10px);
+      font-size: px2rem(25px);
+    }
+  }
+
+  section {
+    .inputs {
+      .pwd {
+        position: relative;
+        width: 100%;
+
+        .hint {
+          position: absolute;
+          top: px2rem(-14px);
+          left: 0;
+          padding: px2rem(2px) px2rem(4px);
+          font-size: px2rem(8px);
+          line-height: px2rem(10px);
+          text-align: center;
+          background-color: black;
+          border-radius: px2rem(2px);
+        }
+
+        .hint::before {
+          position: absolute;
+          bottom: px2rem(-8px);
+          left: 50%;
+          z-index: 10;
+          border-color: black transparent transparent transparent;
+          border-style: solid;
+          border-width: px2rem(4px);
+          content: "";
+        }
+      }
+
+      /deep/.mint-cell {
+        background: transparent;
+
+        .mint-cell-wrapper {
+          padding: 0;
+          background-image: none;
+
+          .mint-cell-value {
+            overflow: hidden;
+            background: $login_input_bg;
+            border-radius: px2rem(5px);
+
+            input {
+              height: px2rem(35px);
+              font-size: px2rem(14px);
+              color: $login_input_text;
+              text-indent: px2rem(10px);
+              background: $login_input_bg;
+            }
+
+            .mint-field-state {
+              margin-right: 5px;
+              margin-left: 0;
+            }
+
+            ::-webkit-input-placeholder {
+              color: $login_input_text;
+            }
+
+            ::-ms-input-placeholder {
+              color: $login_input_text;
+            }
+
+            ::-moz-placeholder {
+              color: $login_input_text;
+            }
+          }
+        }
+      }
+    }
+
+    .rember-user {
+      display: flex;
+      margin: px2rem(10px) 0 px2rem(20px);
+      font-size: px2rem(12px);
+      justify-content: center;
+      align-items: center;
+
+      span.icon-triangle {
+        flex: 1;
+      }
+
+      span.text {
+        flex: 8;
+      }
+
+      .switch {
+        flex: 1;
+      }
+
+      /deep/.mint-switch-core {
+        background-color: $login_submitbtn_bg;
+        border-color: $login_input_bg;
+      }
+    }
+
+    .btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .submit-btn {
+        margin-top: px2rem(10px);
+        color: $white;
+        background-color: $login_submitbtn_bg;
+      }
+
+      .text {
+        height: px2rem(35px);
+        line-height: px2rem(35px);
+      }
+
+      .back-btn {
+        color: $login_backbtn_color;
+        background-color: $white;
+      }
+    }
+  }
+}

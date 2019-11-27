@@ -1,0 +1,114 @@
+$w: 100%;
+
+.popup-box.pc {
+  width: 100%;
+  margin-top: 2px;
+  cursor: pointer;
+
+  .detail {
+    display: flex;
+    width: 0.94 * $w;
+    height: 60px;
+    padding: 0 0.03 * $w;
+    font-size: 16px;
+    line-height: 60px;
+    border-bottom: 1px solid $border_color;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .content {
+    color: $red;
+
+    .input-box {
+      display: flex;
+      font-size: 16px;
+      border-top: 1px solid $border_color;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      span {
+        width: 20%;
+        text-align: center;
+      }
+
+      /deep/.mint-cell-wrapper {
+        background: none;
+        background-position: none;
+        background-repeat: none;
+        background-size: 0;
+        flex: 1;
+
+        input::placeholder {
+          font-size: 16px;
+        }
+      }
+
+      .mint-button--large {
+        font-size: 16px;
+      }
+
+      /deep/.mint-field {
+        background: none;
+        background-position: none;
+        background-repeat: none;
+        background-size: 0;
+      }
+    }
+
+    .input-box:first-child {
+      overflow: hidden;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+
+    .input-box:nth-child(3) {
+      overflow: hidden;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    .input-box:nth-child(4) {
+      background: none;
+      border-top: none;
+    }
+  }
+  /deep/.mint-popup{
+    
+    /deep/.modal-content{
+      /deep/.close{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 30px;
+        height: 31px;
+        line-height: 31px;
+        text-align: center;
+        font-size: 20px;
+      }
+      /deep/.header{
+        font-size: 16px;
+      }
+      .footer{
+        padding: 12px 16px;
+        .btns{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          /deep/.btn-box{
+            width: 120px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #f5f5f5;
+            border-radius: 3px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

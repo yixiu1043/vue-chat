@@ -1,0 +1,83 @@
+.lottery-snapshot.pc {
+  position: unset;
+  display: flex;
+  height: 100%;
+  font-size: 12px;
+  color: $white;
+  color: $black;
+  background-color: unset;
+  justify-content: flex-start;
+  align-items: center;
+
+  .lottery-icon {
+    width: 70px;
+    text-align: center;
+
+    img {
+      width: 30px;
+      height: auto;
+      background: url(../../assets/hall/icon_bg.png) no-repeat center / cover;
+      border-radius: 5px;
+    }
+  }
+
+  .open-counter,
+  .lock-counter {
+    width: 75px;
+    text-align: center;
+    margin-left: 30px;
+
+    .title {
+      margin-bottom: 5px;
+    }
+
+    .title::before {
+      color: $green;
+      margin-right: 2px;
+      content: "⬤";
+    }
+  }
+
+  .lock-counter {
+    .title::before {
+      color: $red;
+    }
+  }
+
+  .crrent-last-con {
+    flex: 1;
+
+    .crrent-info {
+      display: flex;
+      padding-bottom: 5px;
+      justify-content: flex-start;
+      align-items: center;
+
+      .issue {
+        padding-right: 5px;
+      }
+    }
+
+    .last-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 2px;
+
+      .ball-wrapper {
+        .ball {
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          margin: 0 1.5px;
+          font-size: 10px;
+          line-height: 17px;
+          color: $white;
+          text-align: center;
+          background-color: $red;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

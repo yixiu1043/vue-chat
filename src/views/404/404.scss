@@ -1,0 +1,41 @@
+.page404 {
+  .content404 {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $black;
+    text-align: center;
+    margin: 0 auto;
+
+    .img-404 {
+      width: px2rem(300px);
+      margin-bottom: px2rem(10px);
+    }
+
+    .tip-title {
+      font-size: px2rem(20px);
+    }
+
+    .tip-subtitle {
+      font-size: px2rem(14px);
+      margin-top: px2rem(20px);
+      margin-bottom: px2rem(20px);
+    }
+
+    .back-home {
+      .button {
+        display: inline-block;
+        width: px2rem(100px);
+        height: px2rem(35px);
+        line-height: px2rem(35px);
+        background-color: #ff7614;
+        border-color: #ff7614;
+        font-size: px2rem(14px);
+        color: $white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+_龙虎: &龙虎
+  playMatchType: '龙虎'
+  playDigitPanel: '9'
+  betContentKey: ['dragonTiger']
+  selectedRegex: ''
+
+_ssc: &ssc
+  斗牛:
+    牛牛:
+      playMatchType: '斗牛'
+      playDigitPanel: '7'
+      betContentKey: ['niuniu']
+      selectedRegex: ''
+    斗牛大小单双:
+      playMatchType: '斗牛'
+      playDigitPanel: '8'
+      betContentKey: ['niuBigOrSmall']
+      selectedRegex: ''
+
+  龙虎:
+    龙虎_万千: *龙虎
+    龙虎_万百: *龙虎
+    龙虎_万十: *龙虎
+    龙虎_万个: *龙虎
+    龙虎_千百: *龙虎
+    龙虎_千十: *龙虎
+    龙虎_千个: *龙虎
+    龙虎_百十: *龙虎
+    龙虎_百个: *龙虎
+    龙虎_十个: *龙虎
+  后一直选:
+    后一直选复式:
+      playMatchType: '复式'
+      playDigitPanel: '4'
+      betContentKey: ['unit']
+      selectedRegex: '[0-9]{1,10}'
+  定位胆:
+    五星定位胆:
+      playMatchType: '定位胆'
+      playDigitPanel: '0,1,2,3,4'
+      betContentKey: ['tenThousand','thousand','hundred','ten','unit']
+      selectedRegex: '[0-9]{1,10}|[0-9]{1,10}|[0-9]{1,10}|[0-9]{1,10}|[0-9]{1,10}'
+  不定位胆:
+    后三不定位:
+      playMatchType: '不定位'
+      playDigitPanel: '6'
+      betContentKey: ['unfixed']
+      selectedRegex: '[0-9]{2,10}'
+    前三不定位:
+      playMatchType: '不定位'
+      playDigitPanel: '6'
+      betContentKey: ['unfixed']
+      selectedRegex: '[0-9]{2,10}'
+  二星直选:
+    后二直选复式:
+      playMatchType: '复式'
+      playDigitPanel: '3,4'
+      betContentKey: ['ten','unit']
+      selectedRegex: '[0-9]{1,10}|[0-9]{1,10}'
+    前二直选复式:
+      playMatchType: '复式'
+      playDigitPanel: '0,1'
+      betContentKey: ['tenThousand','thousand']
+      selectedRegex: '[0-9]{1,10}|[0-9]{1,10}'
+  二星组选:
+    后二组选组二:
+      playMatchType: '组二'
+      playDigitPanel: '5'
+      betContentKey: ['group']
+      selectedRegex: '[0-9]{2,10}'
+    前二组选组二:
+      playMatchType: '组二'
+      playDigitPanel: '5'
+      betContentKey: ['group']
+      selectedRegex: '[0-9]{2,10}'
+
+
+重庆时时彩: *ssc
+分分彩: *ssc
+五分彩: *ssc
+

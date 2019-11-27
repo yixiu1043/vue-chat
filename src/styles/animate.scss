@@ -1,0 +1,211 @@
+@import './compass.scss';
+
+/* slideInDown */
+.slideInDown {
+  @include prefixer(animation, slideInDown 0.6s ease 0s, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(slideInDown) {
+      from {
+        @include prefixer(transform, translate3d(0, -100%, 0), webkit moz o ms);
+
+        visibility: visible;
+      }
+
+      to {
+        @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+      }
+    }
+  }
+}
+
+/* slideInUp */
+.slideInUp {
+  @include prefixer(animation, slideInUp 0.6s ease 0s 1, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(slideInUp) {
+      from {
+        @include prefixer(transform, translate3d(0, 100%, 0), webkit moz o ms);
+
+        visibility: visible;
+      }
+
+      to {
+        @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+      }
+    }
+  }
+}
+
+/* fadeIn */
+.fadeIn {
+  @include prefixer(animation, fadeIn 0.6s ease 0s 1, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(fadeIn) {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* fadeOut */
+.fadeOut {
+  @include prefixer(animation, fadeOut 0.6s ease 0s 1, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(fadeOut) {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/* shake */
+.shake {
+  @include prefixer(animation, shake 1s, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(shake) {
+      from,
+      to {
+        @include prefixer(transform, translate3d(0, 0, 0), webkit moz o ms);
+      }
+
+      10%,
+      30%,
+      50%,
+      70%,
+      90% {
+        @include prefixer(transform, translate3d(-8px, 0, 0), webkit moz o ms);
+      }
+
+      20%,
+      40%,
+      60%,
+      80% {
+        @include prefixer(transform, translate3d(8px, 0, 0), webkit moz o ms);
+      }
+    }
+  }
+}
+
+//打字效果，长度有字体个数决定；
+.typing {
+  @include prefixer(animation, typing 1.5s steps(15, end), webkit moz o ms);
+  @include prefixer(animation, blink-caret 0.75s step-end infinite, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(typing) {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 8em;
+      }
+    }
+  }
+
+  @at-root {
+    @include prefix-keyframes(blink-caret) {
+      from,
+      to {
+        box-shadow: 1px 0 0 0 transparent;
+      }
+
+      50% {
+        box-shadow: 1px 0 0 0;
+      }
+    }
+  }
+}
+
+/* 刷新按钮动画,圆圈旋转 */
+.spin {
+  @include prefixer(animation, spin 0.5s, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(spin) {
+      to {
+        @include prefixer(transform, rotate(360deg), webkit moz o ms);
+      }
+    }
+  }
+}
+
+/* pulse */
+.pulse {
+  @include prefixer(animation, pulse 0.2s, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(pulse) {
+      from {
+        @include prefixer(transform, scale(0.5), webkit moz o ms);
+      }
+
+      to {
+        @include prefixer(transform, scale(1), webkit moz o ms);
+      }
+    }
+  }
+}
+
+/* grow */
+.grow {
+  @include prefixer(animation, grow 1s infinite, webkit moz o ms);
+
+  @at-root {
+    @include prefix-keyframes(grow) {
+      0%,
+      100% {
+        @include prefixer-value(transform, scaleY(1), webkit moz o ms);
+      }
+
+      50% {
+        @include prefixer-value(transform, scaleY(2), webkit moz o ms);
+      }
+    }
+  }
+}
+
+//发光字体
+.Glow{
+  @include prefixer(animation, Glow 1.5s ease 0s 1, webkit moz o ms);
+  @at-root {
+    @include prefix-keyframes(Glow) {
+      from {
+        text-shadow: 0 0 10px ye,
+          0 0 20px #fff,
+          0 0 30px #fff,
+          0 0 40px #e14844,
+          0 0 70px #e14844,
+          0 0 80px #e14844,
+          0 0 100px #e14844,
+          0 0 150px #e14844;
+      }
+    
+      to {
+        text-shadow: 0 0 5px #fff,
+          0 0 10px #fff,
+          0 0 15px #fff,
+          0 0 20px #e14844,
+          0 0 35px #e14844,
+          0 0 40px #e14844,
+          0 0 50px #e14844,
+          0 0 75px #e14844;
+      }
+    }
+  }
+}

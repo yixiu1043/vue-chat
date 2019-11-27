@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .item.footer {
+    display: flex;
+    width: 33.33333%;
+    margin-bottom: px2rem(10px);
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .text {
+      padding-top: px2rem(10px);
+      font-size: px2rem(13px);
+    }
+  }
+}

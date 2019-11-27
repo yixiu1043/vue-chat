@@ -1,0 +1,119 @@
+.accountant-con {
+  .confirm {
+    width: 100%;
+    height: px2rem(174px);
+    background: $white;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      .header {
+        height: px2rem(30px);
+        padding: 0 px2rem(10px);
+        line-height: px2rem(30px);
+        color: $white;
+        background-color: $red;
+
+        &.light {
+          background-color: $red;
+        }
+
+        &.dark {
+          background-color: $black;
+        }
+      }
+
+      .close-btn {
+        float: right;
+        padding: 0 px2rem(5px);
+      }
+
+      .info {
+        height: px2rem(36px);
+        line-height: px2rem(36px);
+        text-align: center;
+      }
+
+      .inputs {
+        /deep/ .mint-field {
+          background-color: $white;
+
+          input.mint-field-core {
+            text-indent: px2rem(10px);
+            background-color: $white;
+          }
+        }
+      }
+
+      .footer {
+        display: flex;
+        height: 60px;
+        text-align: center;
+
+        .button {
+          height: px2rem(32px);
+          padding: 0 px2rem(10px);
+          margin: 0 1rem;
+          font-size: px2rem(14px);
+          color: $white;
+          background-color: $cancel_bet_bg;
+          flex: 1;
+          align-self: center;
+
+          &.yes.light {
+            background-color: $red;
+          }
+
+          &.yes.dark {
+            background-color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .accountant {
+    display: flex;
+    height: px2rem(45px);
+    padding: 0 px2rem(10px);
+    color: $white;
+    background: $page_tab_bg;
+    align-items: center;
+    justify-content: center;
+
+    &.light {
+      background: $page_tab_bg;
+    }
+
+    &.dark {
+      background: $black;
+    }
+
+   .button {
+      width: px2rem(80px);
+      height: px2rem(32px);
+      padding: 0;
+      font-size: px2rem(14px);
+      color: $black;
+    }
+    .button.btn{
+      width: px2rem(80px);
+    }
+
+    .info {
+      text-align: center;
+      flex: 1;
+      justify-content: center;
+      align-self: center;
+    }
+
+    .keyboard-btn {
+      width: px2rem(40px);
+      height: px2rem(40px);
+      padding-right: px2rem(20px);
+      font-size: px2rem(35px);
+      line-height: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+
+.lottery-popup-warpper.pc {
+  width: 100%;
+  
+  .link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    // height: 200px;
+    padding: 30px 0;
+    color: $white;
+    background-color: rgba($color: $black, $alpha: 0.6);
+    box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+
+    .item {
+      display: flex;
+      width: 25%;
+      margin-bottom: 10px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+  
+      .chatroom-icon {
+        width: 55px;
+        height: 55px;
+        background: url(../../assets/hall/icon_bg.png) no-repeat center / cover;
+        border: 2px solid $hall_lottery_icon_border;
+        border-radius: 10px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .text {
+        padding-top: 10px;
+        font-size: 13px;
+      }
+    }
+    .item:hover{  
+      .text{
+        -webkit-animation: Glow 1.5s ease infinite alternate;
+        animation: Glow 1.5s ease infinite alternate;
+      }
+    }
+  }
+}
+

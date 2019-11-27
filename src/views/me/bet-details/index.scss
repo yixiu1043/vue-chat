@@ -1,0 +1,109 @@
+$w: 100%;
+$h: 100%;
+
+.detail {
+  width: $w;
+  height: 100%;
+  background-color: #fff;
+
+  .main {
+    display: flex;
+    width: 0.94 * $w;
+    padding: 0 0.03 * $w;
+    background-color: $white;
+    flex-direction: column;
+
+    .top {
+      width: $w;
+      min-height: px2rem(60px);
+      
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: px2rem(30px);
+        font-size: px2rem(16px);
+        line-height: px2rem(30px);
+        color: $betdetails_p_color;
+
+        span:nth-child(2) {
+          font-size: px2rem(18px);
+          font-weight: 700;
+          color: $theme;
+        }
+      }
+
+      .right {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: px2rem(20px);
+          font-weight: 700;
+          color: $theme;
+        }
+      }
+    }
+
+    .title {
+      width: 1.1 * $w;
+      height: px2rem(30px);
+      margin-left: -0.03 * $w;
+      padding: 0 0.03 * $w;
+      font-size: px2rem(14px);
+      font-weight: 900;
+      line-height: px2rem(30px);
+      color: $betdetails_li_color;
+      background-color: #fff;
+    }
+
+    li {
+      display: flex;
+      min-height: px2rem(30px);
+      font-size: px2rem(16px);
+      line-height: px2rem(30px);
+      color: $betdetails_p_color;
+      flex-direction: row;
+
+      span:nth-child(1) {
+        width: 25%;
+      }
+
+      span:nth-child(2) {
+        width: 75%;
+        margin-left: px2rem(6px);
+        font-weight: 900;
+        color: $theme;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+    }
+
+    .mid {
+      width: $w;
+
+      li:nth-child(1) {
+        span:nth-child(2) {
+          font-weight: 900;
+          color: $betdetails_li_color;
+        }
+
+        span:nth-child(3) {
+          font-weight: 900;
+          color: $black;
+        }
+      }
+    }
+
+    .footer {
+      li:nth-child(5) {
+        span:nth-child(2) {
+          font-weight: 900;
+          color: $black;
+        }
+      }
+    }
+  }
+}
